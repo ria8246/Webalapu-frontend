@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+        <!-- main container -->
+        <div id="loginMainDiv">
+            <!-- headline -->
+            <div id="loginHeadlineDiv">
+                Login
+            </div>
+            <div id="loginFormDiv">
+                <h:form id="loginForm">
+                    <h:outputLabel value="Username "/>
+                    <h:inputText id="username"/>
+                    <br/>
+                    <h:outputLabel value="Password "/>
+                    <h:inputSecret id="password"/>
+                    <br/>
+                    <h:commandButton id="loginButton" value="Login"/>
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
