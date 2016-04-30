@@ -1,0 +1,19 @@
+
+/*
+    TODO font, body & body *
+*/
+body {
+    padding: 20px;
+    height: 100000px;
+    /*
+    TODO background
+    */
+    background: url('https://www.newton.ac.uk/files/covers/968361.jpg') no-repeat fixed;
+    background-position: 50% 50%;
+}
+#loginAndRegistrationDiv {
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
