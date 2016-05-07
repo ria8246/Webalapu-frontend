@@ -14,34 +14,62 @@
         <h:outputStylesheet name="css/index.css" />
     </h:head>
     <h:body>
-        <!-- main container -->
-        <div id="indexMainDiv">
-            <!-- login and register -->
-            <div id="loginAndRegistrationDiv">
-                <!-- login -->
-                <h:link id="loginLink" value="Login" outcome="login.xhtml"/>
-                <!-- register -->
-                <h:link id="registrationLink" value="Register" outcome="registration.xhtml"/>
+        <div id="mainContainer">
+
+            <div id="headLine">
+                headLine
+
             </div>
-            <!-- headline -->
-            <div id="indexHeadlineDiv">
-                Welcome
-            </div>
-            <!-- objects to buy -->
-            <div id="objectListDiv">
-                <!-- object1 -->
-                <div>
+
+            <div id="content">
+
+                <div id="items">
+
 
                 </div>
-                <!-- object2 stb ezeket lehet mi szurjuk be, meg kell beszelni
-                    ha nem mi szurjuk be akk ennek is van felepitese
-                    (kepnek kulon elem, szovegnek stb)-->
-                <div>
 
+                <div id="fixedContainer">
+                    <div id="userAuth" class="centerContents">
+                        <h:link id="login" value="Login" outcome="login.xhtml"/>
+                        <span>/</span>
+                        <h:link id="register" value="Register" outcome="registration.xhtml"/>         
+                    </div>
+
+                    <div id="currentBasket">
+                        currentBasket
+
+                    </div>
+
+                    <div id="focusItem">
+                        focusItem
+
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="itemTemplate" class="item" onclick="fillFocus(this);">
+            <div class="itemPreview">
+                <img src="resources/img/basket.png"/>
+            </div>
+            <div class="itemData">
+                <div class="itemName">
+                    It's a basket
+                </div>
+                <div class="itemPrice">
 
+                </div>
+                <div class="itemDescription">
+                    description<br></br>
+                    many<br></br>
+                    lines<br></br>
+                    wow<br></br>
+
+                </div>
+            </div>
+            <div id="toBasket"  onclick="toCart(this, event);">
+                <img src="resources/img/basket.png"/>
+            </div>
+        </div>
     </h:body>
 </html>
 

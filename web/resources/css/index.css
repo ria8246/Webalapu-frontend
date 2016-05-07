@@ -70,6 +70,9 @@ body {
 #itemTemplate {
     display: none;
 }
+#toBasket {
+    width: 40px;
+}
 /*classes*/
 .centerContents {
     display: inline-block;

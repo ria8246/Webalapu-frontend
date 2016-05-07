@@ -17,5 +17,6 @@
         itemIndex++;
         $('#items').append($cloned);
     }
-    //setInterval(insertItem, 1000);
+    insertItem();
+   // setInterval(insertItem, 10000);
 })();
