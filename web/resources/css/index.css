@@ -1,19 +1,83 @@
-
-/*
-    TODO font, body & body *
-*/
-body {
-    padding: 20px;
-    height: 100000px;
-    /*
-    TODO background
-    */
-    background: url('https://www.newton.ac.uk/files/covers/968361.jpg') no-repeat fixed;
-    background-position: 50% 50%;
+/*fonts*/
+@font-face {
+    font-family: MTC;
+    src: url('../fonts/Monotype_Corsiva.ttf');
 }
-#loginAndRegistrationDiv {
-    display: inline-block;
+/*tags*/
+* {
+    font-family: MTC;
+    font-size: 30px;
+}
+
+
+body {
+    display: block;
+    position:absolute;
+    height:10000px;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin: 0;
+    /* double of the mainContainer's padding */
+    margin-right:40px;
+    background-color: green;
+}
+/*ids*/
+#mainContainer {
+    /* change body margin if padding is changed */
+    padding: 20px;
+    background: purple;
+    width: 100%;
+    height: 100%;
+}
+#headLine {
+    background: brown;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+#fixedContainer {
     position: fixed;
-    top: 20px;
+    top: 0;
     right: 20px;
+    padding: 10px;
+    background: pink;
+    width: 400px;
+    height: 100%;
+}
+#currentBasket {
+    height: 45%;
+    background: yellow;
+}
+#focusItem {
+    height: 45%;
+    background: brown;
+}
+#userAuth {
+    top: 10%;
+    height: 10%;
+    width: 100%;
+}
+#content{
+    height: 100%;
+}
+#items {
+    background: red;
+    height: 100%;
+}
+#itemTemplate {
+    display: none;
+}
+/*classes*/
+.centerContents {
+    display: inline-block;
+    left: 0;
+    text-align: center;    
+}
+.item {
+    width: 100%;
+    height: 300px;
+    left: 0;
 }
