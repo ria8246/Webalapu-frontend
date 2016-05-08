@@ -48,5 +48,17 @@ function xmlToJson(xml) {
             }
         }
     }
+    function fixIt(obj) {
+        if (obj['#text'] && Object.keys(obj).length === 1) {
+            return obj['#text'];
+        } else if (Object.keys(obj).length > 1) {
+            for (var key in obj) {
+                obj[key] = fixIt(obj[key]);
+            }
+        }
+        return obj;
+    }
+    fixIt(obj);
     return obj;
 }
+
