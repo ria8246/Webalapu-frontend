@@ -22,9 +22,9 @@
             </div>
 
             <div id="content">
-                
+
                 <div id="items">
-                    
+
 
                 </div>
 
@@ -36,7 +36,14 @@
                     </div>
 
                     <div id="currentBasket">
-                        currentBasket
+                        <div id="currentBasketContents">
+                            currentBasket
+
+                        </div>
+                        <div id="sendOrder" title="order" onclick="sendOrder(this)">
+                            <img src="resources/img/deliver.gif"/>
+                        </div>
+
 
                     </div>
 
@@ -47,8 +54,26 @@
                 </div>
             </div>
         </div>
-        <div id="itemTemplate" class="item">
-            <div id="toBasket">
+        <div id="itemTemplate" class="item" onclick="fillFocus(this);">
+            <div class="itemPreview">
+                <img src="resources/img/basket.png"/>
+            </div>
+            <div class="itemData">
+                <div class="itemName">
+                    It's a basket
+                </div>
+                <div class="itemPrice">
+
+                </div>
+                <div class="itemDescription">
+                    description<br></br>
+                    many<br></br>
+                    lines<br></br>
+                    wow<br></br>
+
+                </div>
+            </div>
+            <div id="toBasket"  onclick="toCart(this, event);">
                 <img src="resources/img/basket.png"/>
             </div>
         </div>

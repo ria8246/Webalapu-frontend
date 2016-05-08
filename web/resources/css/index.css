@@ -13,23 +13,27 @@
 body {
     display: block;
     position:absolute;
-    height:10000px;
     bottom:0;
     top:0;
     left:0;
     right:0;
     margin: 0;
-    /* double of the mainContainer's padding */
-    margin-right:40px;
     background-color: green;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
 /*ids*/
 #mainContainer {
-    /* change body margin if padding is changed */
-    padding: 20px;
     background: purple;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 #headLine {
     background: brown;
@@ -41,18 +45,21 @@ body {
 #fixedContainer {
     position: fixed;
     top: 0;
-    right: 20px;
-    padding: 10px;
+    right: 0;
     background: pink;
-    width: 400px;
+    width: 30%;
     height: 100%;
 }
 #currentBasket {
     height: 45%;
+    position: relative;
     background: yellow;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 #focusItem {
     height: 45%;
+    position: relative;
     background: brown;
 }
 #userAuth {
@@ -66,13 +73,18 @@ body {
 #items {
     background: red;
     height: 100%;
+    width: 70%;
 }
 #itemTemplate {
     display: none;
 }
-#toBasket {
+#toBasket, #sendOrder {
     width: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
+
 /*classes*/
 .centerContents {
     display: inline-block;
@@ -80,7 +92,21 @@ body {
     text-align: center;    
 }
 .item {
+    position: relative;
     width: 100%;
     height: 300px;
     left: 0;
+}
+.itemPreview, .itemData {    
+    display: inline-block;
+}
+.itemData {
+    position: absolute;
+    top: 0;
+}
+.itemPreview {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    max-width: 40%;
 }
