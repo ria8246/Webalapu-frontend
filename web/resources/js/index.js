@@ -63,33 +63,13 @@ function sendOrder() {
     $basket.append('<div>order sent</div>');
 
 }
-function serverCall(args) {
-    //TODO url csere
 
-    var url = "http://localhost:8080/Backend/rest/";
-//    var url = "http://iostrm.asuscomm.com:8080/Backend/rest/"
-    $.ajax({
-        method: args.method || 'GET',
-        url: url + getPathParams(args)
-    }).done(function (res) {
-        args.success(res);
-    }).fail(function (res) {
-        args.error(res);
-    });
-}
-function getPathParams(args) {
-    var res = "";
-    for (var key in args.pathParams) {
-        res += '/' + args.pathParams[key];
-    }
-    return args.service + res;
-}
 function getAllProducts() {
     serverCall({
         method: 'GET',
         service: 'product',
-        success: function (res) {
-            console.log('yay', res);
+        success: function (res) {            
+            console.log('ye', xmlToJson(res));
         },
         error: function (res) {
             console.log('nope', res);
