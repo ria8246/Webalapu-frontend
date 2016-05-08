@@ -19,10 +19,15 @@
     };
 
     var itemIndex = 1;
-    function insertItem() {
+    function insertItem(name, price, description) {
+        name = name || "Placeholder name";
+        price = price || "free";
+        description = description || "Placeholder description";
         var $cloned = $('#itemTemplate').clone();
         $cloned.attr('id', 'item' + itemIndex);
-        $cloned.find('.itemPrice')[0].innerHTML = itemIndex * 1000 + '$';
+        $cloned.find('.itemName').html(name);
+        $cloned.find('.itemDescription').html(description);
+        $cloned.find('.itemPrice').html(price);
         itemIndex++;
         $('#items').append($cloned);
     }
@@ -60,7 +65,9 @@ function sendOrder() {
 }
 function serverCall(args) {
     //TODO url csere
-    var url = "http://localhost:8080/Webalapu-backend2/rest/";
+
+    var url = "http://localhost:8080/Backend/rest/";
+//    var url = "http://iostrm.asuscomm.com:8080/Backend/rest/"
     $.ajax({
         method: args.method || 'GET',
         url: url + getPathParams(args)
