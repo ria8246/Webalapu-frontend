@@ -31,14 +31,13 @@
 
                 <div id="fixedContainer">
                     <div id="userAuth" class="centerContents">
-                        <h:link id="login" value="Login" outcome="login.xhtml"/>
+                        <h:link id="login" value="Bejelentkezés" outcome="login.xhtml"/>
                         <span>/</span>
-                        <h:link id="register" value="Register" outcome="registration.xhtml"/>         
+                        <h:link id="register" value="Regisztráció" outcome="registration.xhtml"/>         
                     </div>
 
                     <div id="currentBasket">
                         <div id="currentBasketContents">
-                            currentBasket
 
                         </div>
                         <div id="sendOrder" title="order" onclick="main.sendOrder(this)">
@@ -49,7 +48,6 @@
                     </div>
 
                     <div id="focusItem">
-                        focusItem
 
                     </div>
                 </div>
@@ -74,7 +72,7 @@
 
                 </div>
             </div>
-            <div id="toBasket"  onclick="toCart(this, event);">
+            <div id="toBasket"  onclick="main.toCart(this, event);">
                 <img src="resources/img/basket.png"/>
             </div>
         </div>

@@ -3,7 +3,11 @@ function serverCall(args) {
     var url = "http://localhost:8080/Backend/rest/";
     $.ajax({
         method: args.method || 'GET',
-        url: url + getPathParams(args)
+        url: url + getPathParams(args),
+        data: args.data,
+        headers: {
+            'Content-Type': 'application/xml'
+        }
     }).done(function (res) {
         args.success(res);
     }).fail(function (res) {

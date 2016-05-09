@@ -72,8 +72,9 @@ img {
 }
 #userAuth {
     top: 10%;
-    height: 10%;
+    height: 50px;
     width: 100%;
+    line-height: 50px;
 }
 #content{
     height: 100%;
@@ -91,6 +92,11 @@ img {
     position: absolute;
     right: 10px;
     top: 10px;
+}
+#totalCost {
+    position: absolute;
+    right: 10px;
+    top: 100px;    
 }
 #fixedContainer > *, #items > * {
     border: 1px solid black;
@@ -112,6 +118,10 @@ img {
 }
 .item *, #fixedContainer  *{    
     padding: 10px;
+    
+}
+ #fixedContainer *:not(#userAuth) select{    
+    font-size: 20px;    
 }
 .itemData {
     position: absolute;
