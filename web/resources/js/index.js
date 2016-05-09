@@ -81,5 +81,5 @@ var main = (function () {
     return {
         toCart: toCart,
         fillFocus: fillFocus
-    }
+    };
 })();
