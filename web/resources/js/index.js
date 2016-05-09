@@ -73,23 +73,15 @@ var main = (function () {
     }
     function sendItemOrder(id, quantity) {
 
+        var entry = "<key><id>" + id + "</id></key><value>" + quantity + "</value>";
+        var data = "<order><customer><email>user@webshop.com</email></customer><products><entry>" + entry + "</entry></products></order>"
         serverCall({
             method: 'POST',
             service: 'order',
-            data: {
-                customer: {
-                    //todo email dinamikus + auth token headerbe
-                    email: 'admin@webshop.com'
-                },
-                products: {
-                    entry: {
-                        key: {
-                            id: id
-                        },
-                        value: quantity
-                    }
-                }
+            headers: {
+                Authorization: 'Bearer _backdoor_user'
             },
+            data: data,
             success: function (res) {
                 console.log('order sent for item: ', id, res);
 
@@ -130,3 +122,4 @@ var main = (function () {
         sendOrder: sendOrder
     };
 })();
+

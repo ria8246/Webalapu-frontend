@@ -1,13 +1,14 @@
 function serverCall(args) {
     //TODO url csere
     var url = "http://localhost:8080/Backend/rest/";
+    args.headers = args.headers || {};
+    args.headers['Content-Type'] = 'application/xml';
+    console.log(args.headers)
     $.ajax({
         method: args.method || 'GET',
+        headers: args.headers,
         url: url + getPathParams(args),
-        data: args.data,
-        headers: {
-            'Content-Type': 'application/xml'
-        }
+        data: args.data
     }).done(function (res) {
         args.success(res);
     }).fail(function (res) {
